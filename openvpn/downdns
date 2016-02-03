@@ -1,0 +1,5 @@
+#!/bin/sh
+# this script reverts resolve.conf when vpn is down
+# make sure to chmod 755 and add this to client.conf
+
+mv /tmp/resolv.conf.auto.hold /tmp/resolv.conf.auto

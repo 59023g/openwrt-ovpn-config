@@ -1,0 +1,9 @@
+#!/bin/sh
+# This script prevents DNS Leak over VPN.  Resolves DNS server  pushed down
+# from VPN server versus default ISP nameserver. Make sure to 'chmod 755'
+# and add to client config file.
+
+mv /tmp/resolv.conf.auto /tmp/resolv.conf.auto.hold
+echo $foreign_option_1 | sed -e 's/dhcp-option DOMAIN/domain/g' -e 's/dhcp-option DNS/nameserver/g' >
+echo $foreign_option_2 | sed -e 's/dhcp-option DOMAIN/domain/g' -e 's/dhcp-option DNS/nameserver/g' >
+echo $foreign_option_3 | sed -e 's/dhcp-option DOMAIN/domain/g' -e 's/dhcp-option DNS/nameserver/g' >
