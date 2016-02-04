@@ -10,5 +10,6 @@ rc.local
 services
 shadow
 shells
+protocols
 sysctl.conf
 sysupgrade.conf
